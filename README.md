@@ -13,7 +13,9 @@ GitHub Repo: https://github.com/Vektur/JS-Jeopardy
 
 Domain Model Creation tool: https://app.creately.com
 
-Domain Model:
+Domain Model: https://app.creately.com/diagram/WGywF0YwgN5/edit
+
+User Stories: 
 
 Wireframe: 
 
