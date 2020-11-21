@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="stylesheet" href="css/reset.css">
+<head>
+
+  <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Big+Shoulders+Text&display=swap"
   rel="stylesheet">
-
-<head>
-
   <video autoplay muted loop id="myVideo">
     <source src="Floor.mp4" type="video/mp4">
   </video>
 
-
-  <title></title>
-
+  <title>JS Jeopardy</title>
 
 </head>
 
@@ -26,12 +23,15 @@
       <h1>Welcome to JS-Jeopardy</h1>
 
     </header>
+
+    <main>
+
     <nav>
       <ul id="navbar">
         <li><a href="index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="aboutus.html">Play</a></li>
         <li><a href="leaderboard.html">Leaderboard</a></li>
-        <li><a href="play.html">Play</a></li>
+        <li><a href="play.html">About Us</a></li>
       </ul>
     </nav>
 
@@ -46,6 +46,10 @@
       </ul>
     </section>
 
+
+    <section id="Play">Play</section>
+  </main>
+
     <div class="buttoncontainer">
       <img src="/images/sqblackbutton.PNG" alt="playbutton" class="image">
       <div class="middle">
@@ -57,8 +61,11 @@
 
 
     <footer>JS-Jeopardy Team &copy;</footer>
-    <script></script>
+
   </div>
+
+  <script src="js/home.js"></script>
+
 </body>
 
 </html>
