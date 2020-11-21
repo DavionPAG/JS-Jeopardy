@@ -52,4 +52,16 @@ Answer:  CSS
 Question:  The property blank returns number of characters in the string in most cases.
 Answer:  length
 
-Question:  
+Question:  This operator compares two values (numbers, strings, or Booleans) to see if they are the same. 
+Answer: ==
+
+Question:  This operator compares two values (numbers, strings, or Booleans)  to see if they are not the same.
+Answer:  !=
+
+Question:  This operator compares two values to check that both the data type and value are the same. 
+Answer:  ===
+
+Question:  This operator compares two values to check that bothe the data type and value are not the same. 
+Answer:  !==
+
+
