@@ -4,7 +4,7 @@ var leaderboard = document.getElementById('scoreboard');
 // var scores = [];
 // var highScoreLimit = 10;
 
-// This is render the Leaderboard header
+// This is to render the Leaderboard header
 function renderLeaderboard() {
   var tr = document.createElement('tr');
   leaderboard.appendChild(tr);
@@ -13,12 +13,12 @@ function renderLeaderboard() {
   th.textContent = 'Player';
   tr.appendChild(th);
 
-  var th = document.createElement('th');
-  th.textContent = 'Score';
-  tr.appendChild(th);
+  var th2 = document.createElement('th');
+  th2.textContent = 'Score';
+  tr.appendChild(th2);
 }
 
-// This is to instanttiate each new high score row
+// This is to instantiate each new high score row
 
 function renderHighScore() {
   var tr = document.createElement('tr');

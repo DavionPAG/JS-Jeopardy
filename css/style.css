@@ -1,6 +1,6 @@
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
-  z-index: auto;  
+  z-index: -100;  
   position: fixed;
   right: 0;
   bottom: 0;
@@ -8,16 +8,11 @@
   min-height: 100%;
 } 
 
-body {
-  z-index: 1;
-  background-position: center;
-}
 
 #navbar {
 text-align: center;
 padding-bottom: 10px;
 padding-top:  10px;
-text-decoration: none;
 }
 
 a {
@@ -31,7 +26,6 @@ a {
   list-style-type: none;
   text-decoration: none;
 }
-
 
 h1 {
   font-family: 'Big Sholders Text';
@@ -53,8 +47,6 @@ li {
   margin: auto 
 }
 
-
-
 .content {
   position: fixed;
   bottom: 0;
@@ -65,7 +57,7 @@ li {
   } 
 
 .buttoncontainer {
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
@@ -108,9 +100,6 @@ li {
   
 }
 
-
-
-
 /* button {
   display: center;
 }  */
@@ -123,7 +112,7 @@ li {
 
 section #play {
   color: white;
-} */
+} 
 
 /* .card-container {
   height: 150px;
@@ -151,13 +140,9 @@ section #play {
   transform: rotateY(180deg);
 } */
 
-section {
+/* section {
   color: white;
-}
-
-footer {
-color:  white;
-}
+} */
 
 table{
   border:1px solid coral;
