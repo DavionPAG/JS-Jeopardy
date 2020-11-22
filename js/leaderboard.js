@@ -5,7 +5,7 @@ var leaderboard = document.getElementById('scoreboard');
 // var highScoreLimit = 10;
 
 // This is render the Leaderboard header
-function renderLeaderborad() {
+function renderLeaderboard() {
   var tr = document.createElement('tr');
   leaderboard.appendChild(tr);
 
@@ -30,7 +30,7 @@ function renderHighScore() {
 }
 
 
-renderLeaderborad();
+renderLeaderboard();
 renderHighScore();
 
 

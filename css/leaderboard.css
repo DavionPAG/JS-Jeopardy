@@ -1,0 +1,33 @@
+* {
+  color: white;
+  text-align: center;
+}
+
+#video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+}
+
+body {
+  height: 100%;
+}
+
+table {
+  margin: auto;
+  padding: 10px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  padding: 20px;
+}
