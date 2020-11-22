@@ -156,3 +156,18 @@ section {
 footer {
 color:  white;
 }
+
+table{
+  border:1px solid coral;
+  /* border-width: 10px; */
+  width: 100%;
+  height:35px;
+}
+
+td{
+  color:greenyellow;
+}
+
+tr{
+  color: greenyellow;
+}
