@@ -3,16 +3,26 @@
 
 <head>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Big+Shoulders+Text&display=swap" rel="stylesheet">
-  <head>
-    <header>
 
-      <h1>Leaderboard</h1>
+<link rel="stylesheet" href="css/leaderboard.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Big+Shoulders+Text&display=swap"
+  rel="stylesheet">
+  <title>Leaderboard</title>
+</head>
 
-    </header>
-    <nav>
+<body>
+
+  <video autoplay muted loop id="video">
+    <source src="Floor.mp4" type="video/mp4">
+  </video>
+
+  <main>
+  <header>
+    <h1>Welcome to JS-Jeopardy</h1>
+  </header>
+
+   <nav>
       <ul id="navbar">
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
@@ -20,14 +30,20 @@
         <li><a href="play.html">Play</a></li>
       </ul>
     </nav>
-    <section id="leaderboard">
-      <h2>Leaderboard</h2>
-      <table id="scoreboard"></table>
-    </section>
 
-    <footer>JS-Jeopardy Team &copy;</footer>
-    
-    <script src="js/leaderboard.js"></script>
-  </body>
+  <section id="leaderboard">
+    <h2>Leaderboard</h2>
+    <table id="scoreboard"></table>
+  </section>
+
+</main>
+
+  <footer>JS-Jeopardy Team &copy;</footer>
+
+  <script src="js/leaderboard.js"></script>
+  
+</body>
+
+
 
 </html>
