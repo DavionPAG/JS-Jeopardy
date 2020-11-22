@@ -61,7 +61,7 @@ Answer:  !=
 Question:  This operator compares two values to check that both the data type and value are the same. 
 Answer:  ===
 
-Question:  This operator compares two values to check that bothe the data type and value are not the same. 
+Question:  This operator compares two values to check that both the data type and value are not the same. 
 Answer:  !==
 
 
