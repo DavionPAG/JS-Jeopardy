@@ -102,11 +102,15 @@ function getRandomCharacter() {
   return Math.floor(Math.random() * playerArray.length);
 }
 
+
+
 //Function to choose who goes first
+
+var firstPlayer = '';
 function whoGoesFirst() {
   var f = getRandomCharacter(); // You're it!!!
 
-  var firstPlayer = playerArray[f].name;
+  firstPlayer = playerArray[f].name;
 
   alert(`player ${firstPlayer} goes first!`);
 
@@ -123,5 +127,9 @@ function changeLocation() {
 
 }
 
+// export {playerArray,firstplayer,} to local storage
 
-// export {playerArray,firstplayer,}
+localStorage.setItem('players', JSON.stringify(playerArray));
+
+localStorage.setItem('firstPlayer', JSON.stringify(firstPlayer));
+
