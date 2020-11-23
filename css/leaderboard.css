@@ -14,6 +14,23 @@
   z-index: -100;
 }
 
+h1 {
+  font-family: 'Big Sholders Text';
+  font-size: 3.84em;
+  color: white;
+  text-align:center;
+  padding-top: 10px;
+}
+
+#navbar li{
+  display: inline;
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+
+
 body {
   height: 100%;
 }
@@ -23,9 +40,9 @@ table {
   padding: 10px;
 }
 
-nav ul li {
+/* nav ul li {
   display: inline;
-}
+} */
 
 a {
   text-decoration: none;
