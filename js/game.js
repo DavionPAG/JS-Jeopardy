@@ -13,6 +13,7 @@ var catagoryTable = document.getElementById('catagories');
 //question 1: Prompt a box with multible catagories, choose a catagory and answer the following question!
 
 var playSection = document.getElementById('play');
+var instructionSection = document.getElementById('insturctions');
 
 // var catagories = [];
 // function catgories(questions) {
