@@ -36,7 +36,7 @@ var tr = document.createElement('tr');
 catagoryTable.appendChild(tr);
 td.textContent = '500';
 tr.appendChild(td);
-catagoryTable.addEventListener('onClick', javaScript500);
+catagoryTable.addEventListener('click', javaScript500);
  
 function javaScript500(event){
   if(event.target.td.value) {}
