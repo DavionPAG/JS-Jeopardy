@@ -11,6 +11,7 @@
 body {
   z-index: 1;
   background-position: center;
+  overflow: scroll;
 }
 
 #navbar {
@@ -23,6 +24,10 @@ text-decoration: none;
 a {
   text-decoration: none;
   color: white
+}
+
+p {
+  color: white;
 }
 
 #navbar li{
@@ -41,6 +46,7 @@ h1 {
   padding-top: 10px;
 }
 
+
 h2 {
   color:  white;
   text-align: center;
@@ -51,7 +57,7 @@ li {
   padding: 10px;
   width:  500px;
   margin: auto 
-}
+  }
  
 Main {
   padding-bottom: 100px;
@@ -92,7 +98,7 @@ Main {
   left: 50%;
   transform:  translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
-  d
+  
 }
 
 .buttoncontainer:hover .image {
@@ -108,39 +114,12 @@ Main {
   font-family: arial;
   font-size: 24px;
   padding: 0px 0px 0px 0px
-  
 }
 
 
 section #play {
   color: white;
 } 
-
-/* .card-container {
-  height: 150px;
-  perspective: 600;
-  position: relative;
-  width: 150px;
-}
-.card {
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: all 1s ease-in-out;
-  width: 100%;
-}
-.card:hover {
-  transform: rotateY(180deg);
-}
-.card .side {
-  backface-visibility: hidden;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-.card .back {
-  transform: rotateY(180deg);
-} */
 
 
 footer {
@@ -154,8 +133,6 @@ table {
   width: 98%;
   height:225px;
   text-align: center;
- 
-  
 }
 
 section #catagories {
@@ -163,12 +140,12 @@ section #catagories {
   text-align: center;
  
 }
+
 section td{
   color: greenyellow;
   border-right: 5px coral;
   border-left: 5px coral;
   font-size: 60px;
-  
 }
 
 section tr {
@@ -176,5 +153,59 @@ section tr {
   border-right: 5px coral;
   border-left: 5px coral;
   font-size: 60px;
+}
 
+#aboutus {
+  overflow: auto;
+  
+
+}
+
+ul {
+list-style-type: none;
+
+}
+
+
+.ourteam1 {
+  float: left;
+  max-width: 500px;
+}
+
+.ourteam2 {
+  float: right;
+  padding-right: 30px;
+  color: white;
+  
+}
+
+.imgcontainer {
+  position: relative;
+  max-width: 500px;
+  padding-right: 20px;
+}
+
+.images {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.imgcontainer:hover .overlay {
+  opacity: 1;
 }
