@@ -2,9 +2,9 @@
 
 // var firstPlace = document.createElement('p'); NOT NECCESSARY
 // firstPlace.setAttribute('id', 'Winner'); NOT NECCESARY
+var stringArray = localStorage.getItem('players');
+var playersArray = JSON.parse(stringArray);
 
-
-var playersArray = [];
 
 // Get player data from local storage
 
@@ -30,4 +30,12 @@ function playerGenerator() {
     placements.textContent = `${playersArray[i].name} your score was ${playersArray[i].score}!`;
     results.appendChild(placements);
   }
+
+  playersArray.sort(function (a, b) {
+    return b.score - a.score;
+  });
+  localStorage.setItem('leader', JSON.stringify(playersArray[0]));
 }
+
+
+playerGenerator();

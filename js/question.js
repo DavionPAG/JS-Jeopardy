@@ -55,5 +55,3 @@ new Points2000('What CSS property is used to change the text color of an element
 new Points2000('The property blank returns number of characters in the string in most cases.', 'length');
 
 
-
-function generateAnswers() {}
