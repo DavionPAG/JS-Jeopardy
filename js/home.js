@@ -3,38 +3,39 @@
 
 //Player Array for holding onto number of players
 var playerArray = [];
-var numberForm = document.getElementById('numForm'); // For pulling in form for the number of players
+var numberForm = document.createElement('form');
 var players; //Global variable for storing number of players
 
 
-
 // Selects amount of characters through event handler
-// var playbutton = document.getElementById(* PLACEHOLDER *) // Placeholder for play button
+var playButton = document.getElementById('button');
+var playContainer = document.getElementById('container');
 
+function playEvent(event) {
 
-// function PlayEvent(event) {
-//   playerSubmission();
-// } // This will pipeline players from the play button into the form for number of players
+  playerSubmission();
+  numberForm.addEventListener('submit', submitEvent);
+  // event.target.numberOF
+  // if(event.target)
+} // This will pipeline players from the play button into the form for number of players
 
-numberForm.addEventListener('submit', submitEvent);
 
 function submitEvent(event) {
   event.preventDefault();
-  parseInt(players = event.target.numberOfPlayers.value);
+  players = parseInt(event.target.numberOfPlayers.value);
+  console.log(players);
   determinePlayers();
-} // This will pipline players from the number of players to the player names form. All the way through the the redirect to the game
+}
 
+// This will pipline players from the number of players to the player names form. All the way through the the redirect to the game
 
 
 // Function for selecting amount of players.
 function playerSubmission() {
-
-
-
   var field = document.createElement('fieldset');
 
   var label = document.createElement('label');
-  label.setAttribute('for', 'Number of Players');
+  label.setAttribute('for', 'numberOfPlayers');
   label.textContent = 'Select number of Players ';
 
   var select = document.createElement('select');
@@ -72,11 +73,8 @@ function playerSubmission() {
   field.appendChild(label);
   numberForm.appendChild(field);
   numberForm.appendChild(button);
-
-
+  playContainer.appendChild(numberForm);
 }
-
-// playersubmit.addEventListener('submit', SubmitEvent);
 
 function determinePlayers() {
 
@@ -102,8 +100,6 @@ function getRandomCharacter() {
   return Math.floor(Math.random() * playerArray.length);
 }
 
-
-
 //Function to choose who goes first
 
 var firstPlayer = '';
@@ -118,9 +114,6 @@ function whoGoesFirst() {
 
 }
 
-
-
-
 function changeLocation() {
 
   location.replace('play.html');
@@ -129,7 +122,9 @@ function changeLocation() {
 
 // export {playerArray,firstplayer,} to local storage
 
+
 localStorage.setItem('players', JSON.stringify(playerArray));
 
 localStorage.setItem('firstPlayer', JSON.stringify(firstPlayer));
 
+playButton.addEventListener('click', playEvent);
