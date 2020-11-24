@@ -1,18 +1,13 @@
 'use strict';
-
 // TESTER
 
-var playerArray = [];
+var stringPlayers = localStorage.getItem('players');
+var playerArray = JSON.parse(stringPlayers);
 
-function Players(name) {
-  this.name = name;
-  this.score = 0;
-  playerArray.push(this);
-}
+var stringFirst = localStorage.getItem('firstPlayer');
+var firstPlayer = JSON.parse(stringFirst);
 
-var a = new Players('a');
-var b = new Players('b');
-var c = new Players('c');
+playerArray.push(firstPlayer);
 
 var catagoryTable = document.getElementById('catagories');
 
@@ -40,11 +35,18 @@ var td2 = document.createElement('td');
 
 var td3 = document.createElement('td');
 
-var firstPlayer = playerArray[0];
+// Spread used to make a copy of an array
+var copyplayerArray = [...playerArray];
+
+
+// var firstPlayer = playerArray[0];
+// var firstPlayer = copyplayerArray.shift();
 
 var currentPlayer = firstPlayer;
 
-var ourAnswer = 0;
+var ourAnswer = '';
+
+var rounds = 0;
 
 // var players = localStorage.getItem('players');
 // JSON.parse(players);
@@ -75,24 +77,30 @@ function randomQuestionArray2000() {
 }
 
 function renderGame() {
-  ourAnswer = 0;
-  td = document.createElement('td');
-  td.setAttribute('id', 'td1');
-  td2 = document.createElement('td');
-  td2.setAttribute('id', 'td2');
-  td3 = document.createElement('td');
-  td3.setAttribute('id', 'td3');
+  if (rounds < 8) {
+    td = document.createElement('td');
+    td.setAttribute('id', 'td1');
+    td2 = document.createElement('td');
+    td2.setAttribute('id', 'td2');
+    td3 = document.createElement('td');
+    td3.setAttribute('id', 'td3');
 
-  // var tr = document.createElement('tr');
-  catagoryTable.appendChild(tr);
-  tr.appendChild(td);
-  td.textContent = '500';
-  tr.appendChild(td2);
-  td2.textContent = '1000';
-  tr.appendChild(td3);
-  td3.textContent = '2000';
+    // var tr = document.createElement('tr');
+    catagoryTable.appendChild(tr);
+    tr.appendChild(td);
+    td.textContent = '500';
+    tr.appendChild(td2);
+    td2.textContent = '1000';
+    tr.appendChild(td3);
+    td3.textContent = '2000';
 
-  alert(`${currentPlayer.name} is up! Go ahead and choose a point amount`);
+    setTimeout(() => {alert(`${currentPlayer.name} is up! Go ahead and choose a point amount`);}, 200);
+    rounds++;
+  }
+  else {
+    sendToScoreboard();
+    alert('Game Over, Lets see your scores!');
+  }
 }
 
 
@@ -146,7 +154,7 @@ function gameScript(event) {
     questionSection.appendChild(answer);
     questionSection.appendChild(submitButton);
 
-    questionSection.addEventListener('submit', pointCheck);
+
   }
   else if (event.target.id === 'td3') {
     random = randomQuestionArray2000();
@@ -159,6 +167,7 @@ function gameScript(event) {
     answerLabel = document.createElement('label');
     answerLabel.setAttribute('for', 'answer');
     answerLabel.textContent = 'Please enter an answer';
+    answerLabel.setAttribute('id', 'answerLabel');
     answer = document.createElement('input');
     answer.setAttribute('type', 'text');
     answer.setAttribute('name', 'Answer');
@@ -172,9 +181,8 @@ function gameScript(event) {
     questionSection.appendChild(answer);
     questionSection.appendChild(submitButton);
 
-    // questionSection.addEventListener('submit', pointCheck);
+
   }
-  pointCheck();
 }
 
 
@@ -182,70 +190,75 @@ function pointCheck(event) {
   event.preventDefault();
   ourAnswer = event.target.Answer.value;
   console.log(ourAnswer);
-
-  while (tries < 3 && ourAnswer !== points500Array[random].answer || ourAnswer !== points1000Array[random].answer || ourAnswer !== points2000Array[random].answer) {
-    if (ourAnswer === points500Array[random].answer.toLowerCase()) {
-      alert('Correct Answer!!!');
-      currentPlayer.score += points500Array[random].points;
-      points500Array.splice(random, 1);
-    }
-    else if (ourAnswer === points1000Array[random].answer.toLowerCase()) {
-      alert('Correct Answer!!!');
-      currentPlayer.score += points1000Array[random].points;
-      points1000Array.splice(random, 1);
-    }
-    else if (ourAnswer === points2000Array[random].answer.toLowerCase()) {
-      alert('Correct Answer!!!');
-      currentPlayer.score += points2000Array[random].points;
-      points2000Array.splice(random, 1);
-    }
-    else {
-      console.log(ourAnswer);
-      tries++;
-      alert('Incorrect answer');
-      rerunTurn();
-    }
+  var qanswer = false;
+  // while (tries < 3 && !qanswer) {
+  //   tries++;
+  // while (tries < 3 && ourAnswer !== points500Array[random].answer || ourAnswer !== points1000Array[random].answer || ourAnswer !== points2000Array[random].answer) {
+  if (ourAnswer === points500Array[random].answer.toLowerCase()) {
+    alert('Correct Answer!!!');
+    currentPlayer.score += points500Array[random].points;
+    points500Array.splice(random, 1);
+    qanswer = true;
   }
+  else if (ourAnswer === points1000Array[random].answer.toLowerCase()) {
+    alert('Correct Answer!!!');
+    currentPlayer.score += points1000Array[random].points;
+    points1000Array.splice(random, 1);
+    qanswer = true;
+  }
+  else if (ourAnswer === points2000Array[random].answer.toLowerCase()) {
+    alert('Correct Answer!!!');
+    currentPlayer.score += points2000Array[random].points;
+    points2000Array.splice(random, 1);
+    qanswer = true;
+  }
+  else {
+    console.log(ourAnswer);
+    alert('Incorrect answer');
+    // rerunTurn();
+  }
+  // }
 
-  if (tries === 3) {
-    alert('Sorry nice try but its the next players turn!');
+  if (!qanswer) {
+    alert('Sorry nice try, try again');
     nextTurn();
   }
-  else if (tries !== 3) {
+  else if (qanswer) {
     alert('Nice Job!');
     nextTurn();
   }
+  // Next players turn
 }
 
-function currentPlayerFunction() {
-  var i = firstPlayer;
+// function currentPlayerFunction() {
+//   var i = firstPlayer;
 
 
-}
+// }
 
-function rerunTurn() {
-  questionSection.removeChild(question);
-  questionSection.removeChild(answerLabel);
-  questionSection.removeChild(answer);
-  questionSection.removeChild(submitButton);
-
-  renderGame();
-
-}
 
 function nextTurn() {
   questionSection.removeChild(question);
   questionSection.removeChild(answerLabel);
   questionSection.removeChild(answer);
+  answer.innerHTML = null;
   questionSection.removeChild(submitButton);
-
+  removeEventListener('submit', pointCheck);
   currentPlayerFunction();
   renderGame();
 
 }
 
-// currentPlayerFunction();
-// renderGame();
+function sendToScoreboard() {
+  localStorage.setItem('players',JSON.stringify(playerArray));
+  location.replace('endgame.html');
+}
+
+function currentPlayerFunction() {
+  currentPlayer;
+}
+
+renderGame();
 
 catagoryTable.addEventListener('click', gameScript);
 

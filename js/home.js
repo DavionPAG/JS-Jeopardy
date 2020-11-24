@@ -106,15 +106,21 @@ var firstPlayer = '';
 function whoGoesFirst() {
   var f = getRandomCharacter(); // You're it!!!
 
-  firstPlayer = playerArray[f].name;
+  firstPlayer = playerArray[f];
+  playerArray.splice(firstPlayer, 1);
 
-  alert(`player ${firstPlayer} goes first!`);
+  alert(`player ${firstPlayer.name} goes first!`);
 
   changeLocation();
 
 }
 
 function changeLocation() {
+
+  localStorage.setItem('players', JSON.stringify(playerArray));
+
+  localStorage.setItem('firstPlayer', JSON.stringify(firstPlayer));
+
 
   location.replace('play.html');
 
@@ -123,8 +129,5 @@ function changeLocation() {
 // export {playerArray,firstplayer,} to local storage
 
 
-localStorage.setItem('players', JSON.stringify(playerArray));
-
-localStorage.setItem('firstPlayer', JSON.stringify(firstPlayer));
 
 playButton.addEventListener('click', playEvent);
