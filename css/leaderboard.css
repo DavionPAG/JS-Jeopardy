@@ -2,7 +2,6 @@
   color: white;
   text-align: center;
 }
-
 #video {
   position: fixed;
   min-width: 100%;
@@ -13,7 +12,6 @@
   left: 0;
   z-index: -100;
 }
-
 h1 {
   font-family: 'Big Sholders Text';
   font-size: 3.84em;
@@ -21,29 +19,22 @@ h1 {
   text-align:center;
   padding-top: 10px;
 }
-
 #navbar li{
   display: inline;
   color: white;
   list-style-type: none;
   text-decoration: none;
 }
-
-
-
 body {
   height: 100%;
 }
-
 table {
   margin: auto;
   padding: 10px;
 }
-
 /* nav ul li {
   display: inline;
 } */
-
 a {
   text-decoration: none;
   padding: 20px;
