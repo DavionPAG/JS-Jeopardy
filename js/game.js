@@ -251,6 +251,8 @@ catagoryTable.addEventListener('click', gameScript);
 
 questionSection.addEventListener('submit', pointCheck);
 
+localStorage.setItem('players', JSON.stringify(playerArray));
+
 // var td = document.createElement('tr');
 // catagoryTable.appendChild(tr);
 // td.textContent = '1000';
