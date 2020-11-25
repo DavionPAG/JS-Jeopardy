@@ -77,7 +77,7 @@ function randomQuestionArray2000() {
 }
 
 function renderGame() {
-  if (rounds < 8) {
+  if (rounds < 7) {
     td = document.createElement('td');
     td.setAttribute('id', 'td1');
     td2 = document.createElement('td');
@@ -123,6 +123,7 @@ function gameScript(event) {
     answer.setAttribute('name', 'Answer');
     submitButton = document.createElement('button');
     submitButton.setAttribute('id', 'submitButton');
+    submitButton.innerHTML = 'Submit';
 
 
     questionSection.appendChild(question);
@@ -149,6 +150,7 @@ function gameScript(event) {
     answer.setAttribute('name', 'Answer');
     submitButton = document.createElement('button');
     submitButton.setAttribute('id', 'submitButton');
+    submitButton.innerHTML = 'Submit';
 
 
     questionSection.appendChild(question);
@@ -173,9 +175,9 @@ function gameScript(event) {
     answer = document.createElement('input');
     answer.setAttribute('type', 'text');
     answer.setAttribute('name', 'Answer');
-
     submitButton = document.createElement('button');
     submitButton.setAttribute('id', 'submitButton');
+    submitButton.innerHTML = 'Submit';
 
 
     questionSection.appendChild(question);
@@ -193,9 +195,6 @@ function pointCheck(event) {
   ourAnswer = event.target.Answer.value;
   console.log(ourAnswer);
   var qanswer = false;
-  // while (tries < 3 && !qanswer) {
-  //   tries++;
-  // while (tries < 3 && ourAnswer !== points500Array[random].answer || ourAnswer !== points1000Array[random].answer || ourAnswer !== points2000Array[random].answer) {
   if (ourAnswer === points500Array[random].answer.toLowerCase()) {
     alert('Correct Answer!!!');
     currentPlayer.score += points500Array[random].points;
@@ -219,7 +218,7 @@ function pointCheck(event) {
     alert('Incorrect answer');
     // rerunTurn();
   }
-  // }
+
 
   if (!qanswer) {
     alert('Sorry nice try, try again');
