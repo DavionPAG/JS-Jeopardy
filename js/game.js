@@ -123,6 +123,7 @@ function gameScript(event) {
     answer.setAttribute('name', 'Answer');
     submitButton = document.createElement('button');
     submitButton.setAttribute('id', 'submitButton');
+    submitButton.innerHTML = 'Submit';
 
 
     questionSection.appendChild(question);
@@ -149,6 +150,7 @@ function gameScript(event) {
     answer.setAttribute('name', 'Answer');
     submitButton = document.createElement('button');
     submitButton.setAttribute('id', 'submitButton');
+    submitButton.innerHTML = 'Submit';
 
 
     questionSection.appendChild(question);
@@ -173,9 +175,9 @@ function gameScript(event) {
     answer = document.createElement('input');
     answer.setAttribute('type', 'text');
     answer.setAttribute('name', 'Answer');
-
     submitButton = document.createElement('button');
     submitButton.setAttribute('id', 'submitButton');
+    submitButton.innerHTML = 'Submit';
 
 
     questionSection.appendChild(question);
