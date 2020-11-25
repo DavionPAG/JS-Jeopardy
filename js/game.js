@@ -116,7 +116,7 @@ function gameScript(event) {
     question.textContent = points500Array[random].question;
     answerLabel = document.createElement('label');
     answerLabel.setAttribute('for', 'answer');
-    answerLabel.textContent = 'Please enter an answer';
+    answerLabel.textContent = 'Please enter an answer ';
     answerLabel.setAttribute('id', 'answerLabel');
     answer = document.createElement('input');
     answer.setAttribute('type', 'text');
@@ -143,7 +143,7 @@ function gameScript(event) {
     question.textContent = points1000Array[random].question;
     answerLabel = document.createElement('label');
     answerLabel.setAttribute('for', 'answer');
-    answerLabel.textContent = 'Please enter an answer';
+    answerLabel.textContent = 'Please enter an answer ';
     answerLabel.setAttribute('id', 'answerLabel');
     answer = document.createElement('input');
     answer.setAttribute('type', 'text');
@@ -170,7 +170,7 @@ function gameScript(event) {
     question.textContent = points2000Array[random].question;
     answerLabel = document.createElement('label');
     answerLabel.setAttribute('for', 'answer');
-    answerLabel.textContent = 'Please enter an answer';
+    answerLabel.textContent = 'Please enter an answer ';
     answerLabel.setAttribute('id', 'answerLabel');
     answer = document.createElement('input');
     answer.setAttribute('type', 'text');
