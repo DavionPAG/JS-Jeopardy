@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Big+Shoulders+Text&display=swap"
+    rel="stylesheet">
+
+  <video autoplay muted loop id="myVideo">
+    <source src="Floor.mp4" type="video/mp4">
+  </video>
+
+  <title>JS Jeopardy</title>
+
+</head>
+
+<body>
+  <div class="content">
+    <header>
+
+      <h1>Welcome to JS-Jeopardy</h1>
+
+    </header>
+
+    <main>
+
+      <nav>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ourteam.html">Our Team</a></li>
+          <li><a href="leaderboard.html">Leaderboard</a>
+        </ul>
+      </nav>
+
+      <section id="Instructions">
+        <h2>Instructions</h2>
+        <ul>
+          <li>Press the play button below</li>
+          <li>Select the number of players and press submit</li>
+          <li>Enter your name(s) then press ok.  The game will randomly select which player will go first</li>
+          <li>Type your name into the text box. Press submit</li>
+          <li>This will take you to the game page</li>
+          <li>Place a wager by clicking on 500, 1000 or 2000 </li>
+          <li>Answer the question and you will win that wager </li>
+          <li>Please use lowercase letters when answering questions</li>
+
+        </ul>
+      </section>
+
+    </main>
+
+    <div id="container" class="buttoncontainer">
+      <img id="button" src="/images/blackplaybutton.png" alt="playbutton" class="image">
+      <div class="middle">
+        <div class="text"></div>
+      </div>
+      </main>
+
+      <script src="js/question.js"></script>
+    </div>
+
+    <script src="js/home.js"></script>
+    <footer></footer>
+</body>
+
+</html>

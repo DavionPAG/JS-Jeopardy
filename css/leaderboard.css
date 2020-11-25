@@ -1,0 +1,54 @@
+* {
+  color: white;
+  text-align: center;
+}
+#video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+}
+h1 {
+  font-family: 'Big Sholders Text';
+  font-size: 3.84em;
+  color: white;
+  text-align:center;
+  padding-top: 10px;
+}
+#navbar li{
+  display: inline;
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+}
+body {
+  height: 100%;
+}
+table {
+  margin: auto;
+  padding: 10px;
+}
+/* nav ul li {
+  display: inline;
+} */
+a {
+  text-decoration: none;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+#scoreboard th {
+  font-size: 40px;
+  padding: 20px;
+}
+
+#scoreboard td {
+  font-size: 36px;
+}
