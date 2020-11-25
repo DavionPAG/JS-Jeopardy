@@ -224,3 +224,14 @@ list-style-type: none;
   font-size: 36px;
 }
 
+#questions {
+  font-size: 25px;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  }
+
+  #results {
+    font-size: 64px;
+    text-align: center;
+
+  }

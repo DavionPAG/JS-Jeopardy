@@ -39,3 +39,16 @@ a {
   text-decoration: none;
   padding: 20px;
 }
+
+h2 {
+  font-size: 50px;
+}
+
+#scoreboard th {
+  font-size: 40px;
+  padding: 20px;
+}
+
+#scoreboard td {
+  font-size: 36px;
+}
