@@ -77,7 +77,7 @@ function randomQuestionArray2000() {
 }
 
 function renderGame() {
-  if (rounds < 7) {
+  if (rounds < 4) {
     td = document.createElement('td');
     td.setAttribute('id', 'td1');
     td2 = document.createElement('td');
