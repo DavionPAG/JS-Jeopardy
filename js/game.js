@@ -117,6 +117,7 @@ function gameScript(event) {
     answerLabel = document.createElement('label');
     answerLabel.setAttribute('for', 'answer');
     answerLabel.textContent = 'Please enter an answer';
+    answerLabel.setAttribute('id', 'answerLabel');
     answer = document.createElement('input');
     answer.setAttribute('type', 'text');
     answer.setAttribute('name', 'Answer');
@@ -142,6 +143,7 @@ function gameScript(event) {
     answerLabel = document.createElement('label');
     answerLabel.setAttribute('for', 'answer');
     answerLabel.textContent = 'Please enter an answer';
+    answerLabel.setAttribute('id', 'answerLabel');
     answer = document.createElement('input');
     answer.setAttribute('type', 'text');
     answer.setAttribute('name', 'Answer');

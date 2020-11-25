@@ -37,7 +37,7 @@ new Points500('If you do not know how many times the code would run, you can use
 
 
 new Points1000('In computer programming, each physical thing in the world can be represented as an  ', 'object');
-new Points1000(' A blank is the computer\'s way of sticking up its hand to say, Hay this just happend!', 'event');
+new Points1000(' A blank is the computer\'s way of sticking up its hand to say, Hey this just happend!', 'event');
 new Points1000('A blank is a series of instructions that a computer can follow one-by-one. ', 'script');
 new Points1000('Each individual instruction or step is know as a blank. ', 'statement');
 new Points1000('Some statements are surrounded by curly braces; these are know as blank', 'code blocks');

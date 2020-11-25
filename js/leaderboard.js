@@ -1,10 +1,39 @@
 'use strict';
+var stringleader = localStorage.getItem('leader');
+var leader = JSON.parse(stringleader);
+var OldLeaderString = localStorage.getItem('oldLeader');
 
-// var playerData = localStorage.getItem('players');
-//JSON.parse(playerData);
+var permStringData = localStorage.getItem('permData');
+var permData = JSON.parse(permStringData);
 
 
-var playerData = [];//this is only for testing!!!
+if (permData) {
+
+  playerData = permData;
+  // playerData.push(leader);
+
+  if (stringleader === OldLeaderString) {
+    console.log(playerData);
+
+  }
+  else {
+
+    playerData.push(leader);
+
+    var oldLeader = JSON.parse(stringleader);
+    localStorage.setItem('oldLeader', JSON.stringify(oldLeader));
+  }
+
+} else {
+
+  var playerData = [];
+
+  new TestPlayers('Colton', 10000);
+  new TestPlayers('Davion', 11000);
+  new TestPlayers('Jaque', 12000);
+  new TestPlayers('Terrence', 13000);
+}
+
 
 var leaderboard = document.getElementById('scoreboard');
 
@@ -29,20 +58,18 @@ function TestPlayers(name, score) {
   playerData.push(this);
 }
 
-new TestPlayers('Colton', 10000);
-new TestPlayers('Davion', 11000);
-new TestPlayers('Jaque', 12000);
-new TestPlayers('Terrence', 13000);
 
 
 console.log(playerData);
 // This is to instanttiate each new high score row
 
-playerData.sort(function (a, b) {
-  return b.score - a.score;
-});
+
 
 function renderHighScore() {
+
+  playerData.sort(function (a, b) {
+    return b.score - a.score;
+  });
 
   for (var i = 0; i < playerData.length; i++) {
 
@@ -57,12 +84,16 @@ function renderHighScore() {
     td.textContent = (playerData[i].score);
     tr.appendChild(td);
   }
+
+  localStorage.setItem('permData', JSON.stringify(playerData));
 }
 
 //localStorage.setItem('highScores', JSON.stringify(playerData)); //How to add to/not rewrite current data??
 
-
 renderLeaderboard();
 renderHighScore();
+
+
+
 
 
