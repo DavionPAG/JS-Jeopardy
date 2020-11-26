@@ -29,7 +29,7 @@ function Points2000(question, answer) {
 new Points500('This operator compares two values (numbers, strings, or Booleans) to see if they are the same', '==');
 new Points500('This operator compares two values (numbers, strings, or Booleans)  to see if they are not the same', '!=');
 new Points500('This operator compares two values to check that both the data type and value are the same', '===');
-new Points500('This operator compares two values to check that bothe the data type and value are not the same', '!==');
+new Points500('This operator compares two values to check that both the data type and value are not the same', '!==');
 new Points500('A blank variable can only have a value of true or false', 'boolean');
 new Points500('Blank CSS property can prevent content from trying to flow around or alongside a floated element', 'clear');
 new Points500('If you do not know how many times the code would run, you can use a blank loop', 'while');
